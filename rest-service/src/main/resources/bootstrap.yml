@@ -1,5 +1,8 @@
 spring:
   application:
     name: rest-service
+  cloud:
+    config:
+      uri: http://config-service:8888
 server:
   port: 0

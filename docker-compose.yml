@@ -1,0 +1,32 @@
+rest-service:
+  image: spring-cloud-netflix-oss/rest-service
+  ports:
+   - 9001:9001
+  links:
+   - discovery-service
+   - config-service
+rest-consumer:
+  image: spring-cloud-netflix-oss/rest-consumer
+  ports:
+   - 9002:9002
+  links:
+   - discovery-service
+   - config-service
+   - rest-service
+config-service:
+  image: spring-cloud-netflix-oss/config-service
+  ports:
+   - 8888:8888
+discovery-service:
+  image: spring-cloud-netflix-oss/discovery-service
+  ports:
+   - 9003:9003
+  links:
+   - config-service
+edge-service:
+  image: spring-cloud-netflix-oss/edge-service
+  ports:
+   - 9004:9004
+  links:
+   - discovery-service
+   - config-service

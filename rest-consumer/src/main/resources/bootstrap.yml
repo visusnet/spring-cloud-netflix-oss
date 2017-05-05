@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: rest-consumer
+server:
+  port: 0

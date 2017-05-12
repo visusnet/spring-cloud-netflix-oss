@@ -20,8 +20,6 @@
         <module>rest-consumer</module>
         <module>rest-service</module>
         <module>config-service</module>
-        <module>discovery-service</module>
-        <module>edge-service</module>
     </modules>
 
     <properties>

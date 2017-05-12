@@ -8,11 +8,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-@EnableDiscoveryClient
 public class RestConsumerApplication {
 
 	@Bean
-	@LoadBalanced
 	public RestTemplate restTemplate() {
 		return new RestTemplate();
 	}

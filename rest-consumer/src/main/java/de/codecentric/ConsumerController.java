@@ -12,6 +12,6 @@ public class ConsumerController {
 
     @RequestMapping("/doSomething")
     public String doSomething() {
-        return restTemplate.getForObject("http://rest-service/resource", String.class);
+        return restTemplate.getForObject("http://localhost:9001/resource", String.class);
     }
 }
